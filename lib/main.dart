@@ -1,3 +1,4 @@
+import 'package:cocktail_app/homePage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,13 +11,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'my app',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: Scaffold(
-        appBar: AppBar(title: Text('my title')),
-        body: Center(child: Text('Hello World')),
-      ),
-    );
+        title: 'my app',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(primarySwatch: Colors.blue),
+        home: const HomePage(),);
   }
 }
