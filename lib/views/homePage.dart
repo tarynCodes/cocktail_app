@@ -1,3 +1,4 @@
+import "package:cocktail_app/views/cocktailInfoPage.dart";
 import "package:flutter/material.dart";
 import "package:cocktail_app/controllers/cocktail_api.dart";
 import "package:cocktail_app/views/cocktailViewer.dart";
@@ -28,9 +29,22 @@ class _HomePageState extends State<HomePage> {
                 color: Colors.white,
               ),
             ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const CocktailInfo()),
+                );
+              },
+              child: Container(
+                margin: const EdgeInsets.only(top: 150),
+                child: CocktailNameWidget(cocktailName: cocktailName),
+              ),
+            ),
             Container(
                 margin: const EdgeInsets.only(top: 150),
-                child: CocktailNameWidget(cocktailName: cocktailName)),
+                child:
+                    const Text("Like the look of this? Click for more info!")),
             Container(
               margin: const EdgeInsets.only(top: 70),
               height: 75,
