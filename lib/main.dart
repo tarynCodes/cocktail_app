@@ -1,4 +1,4 @@
-import 'package:cocktail_app/views/homePage.dart';
+import 'package:cocktail_app/views/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {

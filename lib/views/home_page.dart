@@ -1,4 +1,4 @@
-import "package:cocktail_app/views/cocktailInfoPage.dart";
+import 'package:cocktail_app/views/cocktail_info_page.dart';
 import "package:flutter/material.dart";
 import 'package:cocktail_app/models/cocktail_api.dart';
 import 'package:cocktail_app/controllers/cocktail_viewer.dart';
@@ -66,7 +66,7 @@ class _HomePageState extends State<HomePage> {
                   backgroundColor:
                       MaterialStateProperty.all<Color>(Colors.indigo),
                 ),
-                child: Text("Click for your Next Favourite Cocktail!"),
+                child: const Text("Click for your Next Favourite Cocktail!"),
               ),
             ),
           ],
