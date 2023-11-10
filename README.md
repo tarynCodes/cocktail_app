@@ -17,4 +17,4 @@ To view the app use command `flutter run` and choose your desired method to view
 
 The home page - if you click 'click for your next favourite cocktail' button this then brings back a random cocktail name that you can then click to go to its cocktail page and view ingredients, mesaures and method to make this cocktail. 
 
-For future versions I would like to add the picture and video content to make the app more visual interactive. 
+For future versions I would like to add the picture and video content to make the app more visually interactive. 
