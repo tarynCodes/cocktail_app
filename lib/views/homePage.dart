@@ -1,7 +1,7 @@
 import "package:cocktail_app/views/cocktailInfoPage.dart";
 import "package:flutter/material.dart";
-import "package:cocktail_app/controllers/cocktail_api.dart";
-import "package:cocktail_app/views/cocktailViewer.dart";
+import 'package:cocktail_app/models/cocktail_api.dart';
+import 'package:cocktail_app/controllers/cocktail_viewer.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -33,7 +33,9 @@ class _HomePageState extends State<HomePage> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const CocktailInfo()),
+                  MaterialPageRoute(
+                      builder: (context) =>
+                          CocktailInfo(cocktailName: cocktailName)),
                 );
               },
               child: Container(
@@ -42,9 +44,14 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             Container(
-                margin: const EdgeInsets.only(top: 150),
-                child:
-                    const Text("Like the look of this? Click for more info!")),
+              margin: const EdgeInsets.only(top: 50),
+              child: const Text(
+                "Like the Sound of this? Click on the cocktail for more info!",
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+            ),
             Container(
               margin: const EdgeInsets.only(top: 70),
               height: 75,
@@ -55,7 +62,11 @@ class _HomePageState extends State<HomePage> {
                     cocktailName = newCocktailName;
                   });
                 },
-                child: const Text("Click for your Next Favourite Cocktail!"),
+                style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.indigo),
+                ),
+                child: Text("Click for your Next Favourite Cocktail!"),
               ),
             ),
           ],
